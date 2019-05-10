@@ -1,28 +1,15 @@
-<header class='site-header'>
-
-  <div class='branding'>
-    Lukas Krieger
+<div class='flex flex-col h-screen'>
+  <div class='h-16 w-full text-center border-b border-grey p-4 inline-flex'>
+    <div class='flex-1'>Lukas Krieger</div>
+    <div class='flex-1'>{{#link-to 'welcome'}}<span>Home</span>{{/link-to}}</div>
+    <div class='flex-1'>{{#link-to 'about'}}<span>About</span>{{/link-to}}</div>
   </div>
 
-  <nav class='site-navigation'>
-    <ul class='menu'>
-      <li>
-        {{#link-to 'welcome'}}
-          <span>Home</span>
-        {{/link-to}}
-      </li>
-      <li>
-        {{#link-to 'about'}}
-          <span>About</span>
-        {{/link-to}}
-      </li>
-    </ul>
-  </nav>
+  <div class='flex-grow mx-auto p-8 pin-b'>
+    {{outlet}}
+  </div>
 
-</header>
-
-<div class='outlet'>
-  {{outlet}}
+  <div class='h-16 w-full text-center border-t border-grey p-4'>
+    I'm the Footer for Lukas Krieger
+  </div>
 </div>
-
-<footer class='site-footer'>I'm the Footer for Lukas Krieger</footer>
