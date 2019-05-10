@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('welcome', {path: '/'});
   this.route('about');
   this.route('404', {path:'/*'});
+  this.route('science');
 });
 
 export default Router;
