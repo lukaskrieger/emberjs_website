@@ -1,5 +1,28 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<header class='site-header'>
 
-{{outlet}}
+  <div class='branding'>
+    Lukas Krieger
+  </div>
+
+  <nav class='site-navigation'>
+    <ul class='menu'>
+      <li>
+        {{#link-to 'welcome'}}
+          <span>Home</span>
+        {{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'about'}}
+          <span>About</span>
+        {{/link-to}}
+      </li>
+    </ul>
+  </nav>
+
+</header>
+
+<div class='outlet'>
+  {{outlet}}
+</div>
+
+<footer class='site-footer'>I'm the Footer for Lukas Krieger</footer>

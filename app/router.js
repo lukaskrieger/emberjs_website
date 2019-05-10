@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('welcome', {path: '/'});
+  this.route('about');
+  this.route('404', {path:'/*'});
 });
 
 export default Router;
