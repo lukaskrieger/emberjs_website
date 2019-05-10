@@ -1,11 +1,19 @@
-<div class="flex flex-col h-screen">
+<div class="">
   <div class="h-16 w-full text-center border-b border-grey p-4 inline-flex">
     <div class="flex-1">Lukas Krieger</div>
     <div class="flex-1">{{#link-to "welcome"}}<span>Home</span>{{/link-to}}</div>
     <div class="flex-1">{{#link-to "about"}}<span>About</span>{{/link-to}}</div>
+    <div class="flex-1">{{#scroll-to target='#contact' tagName='a' duration=1000}}<span>Contact</span>{{/scroll-to}}</div>
   </div>
 
-  <div class="flex-grow mx-auto p-8 pin-b">
+  {{scroll-to
+    label='Click to scroll'
+    target='#science'
+    tagName='a'
+    duration=1000
+  }}
+
+  <div class="h-auto mx-auto p-8 pin-b">
     {{outlet}}
   </div>
 

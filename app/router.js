@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('about');
   this.route('404', {path:'/*'});
   this.route('science');
+  this.route('contact');
 });
 
 export default Router;

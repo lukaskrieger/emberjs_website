@@ -5,6 +5,7 @@ export default Route.extend({
         this._super();
         this.generateController('about');
         this.generateController('science');
+        this.generateController('contact');
     },
     renderTemplate: function () {
         this.render()
@@ -12,6 +13,8 @@ export default Route.extend({
         //getting the generated controller
         var aboutController = this.controllerFor('about');
         var scienceController = this.controllerFor('science');
+        var contactController = this.controllerFor('contact');
+
 
         this.render('about', {           // the template to render
             into: 'welcome',       // the template to render into
@@ -22,6 +25,11 @@ export default Route.extend({
             into: 'welcome',
             outlet: 'science',
             controller: scienceController
+        });
+        this.render('contact', {
+            into: 'welcome',
+            outlet: 'contact',
+            controller: contactController
         });
     }
 });
