@@ -1,16 +1,21 @@
-<h1>Welcome</h1>
-
-Test 1
-
-
-<div class="h-screen">
-  {{outlet "about"}}
+<div class="h-screen w-full bg-cover mb-8" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 255, 255)), url('/assets/images/welcome.JPG'); background-position: center; background-size: cover;" title="Welcome">
 </div>
 
-<div class="h-auto">
-  {{outlet "science"}}
+<div class="flex flex-row">
+    <div class="flex-auto min-w-lg"></div>
+    <div class="flex-stretch max-w-3xl">
+        <div class="h-screen mb-8">
+        {{outlet "about"}}
+        </div>
+
+        <div class="h-auto mb-8">
+        {{outlet "science"}}
+        </div>
+
+        <div class="h-screen mb-8">
+        {{outlet "contact"}}
+        </div>
+    </div>
+    <div class="flex-auto min-w-lg"></div>
 </div>
 
-<div class="h-screen">
-  {{outlet "contact"}}
-</div>
