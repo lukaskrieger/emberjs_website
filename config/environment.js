@@ -32,7 +32,20 @@ module.exports = function(environment) {
           'ember'
         ]
       }
+    },
+
+    googleFonts: [
+      'Open+Sans:300,400,700',
+      'Roboto:300',
+      'Titillium+Web:400,900'
+    ],
+
+    // Set or update content security policies
+    contentSecurityPolicy: {
+      'font-src': "'self' fonts.gstatic.com",
+      'style-src': "'self' fonts.googleapis.com"
     }
+
   };
 
   if (environment === 'development') {
