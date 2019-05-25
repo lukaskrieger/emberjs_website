@@ -1,23 +1,16 @@
 <div class="">
   <div class="h-16 w-full text-center border-b border-grey p-4 inline-flex">
     <div class="flex-1">Lukas Krieger</div>
-    <div class="flex-1">{{#link-to "welcome"}}<span>Home</span>{{/link-to}}</div>
-    <div class="flex-1">{{#link-to "about"}}<span>About</span>{{/link-to}}</div>
+    <div class="flex-1">{{#scroll-to target='#about' tagName='a' duration=1000}}<span>About</span>{{/scroll-to}}</div>
+    <div class="flex-1">{{#scroll-to target='#science' tagName='a' duration=1000}}<span>Science</span>{{/scroll-to}}</div>
     <div class="flex-1">{{#scroll-to target='#contact' tagName='a' duration=1000}}<span>Contact</span>{{/scroll-to}}</div>
   </div>
-
-  {{scroll-to
-    label='Click to scroll'
-    target='#science'
-    tagName='a'
-    duration=1000
-  }}
 
   <div class="h-auto">
     {{outlet}}
   </div>
 
   <div class="h-16 w-full text-center border-t border-grey p-4">
-    I'm the Footer for Lukas Krieger
+    I'm the Footer for Lukas Krieger. This was built with {{fa-icon 'ember' prefix='fab'}}
   </div>
 </div>

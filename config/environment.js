@@ -20,6 +20,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    // Add options here
+    fontawesome: {
+      icons: {
+        'free-brands-svg-icons': [
+          'linkedin-in',
+          'github',
+          'researchgate',
+          'ember'
+        ]
+      }
     }
   };
 
